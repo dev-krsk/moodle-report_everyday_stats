@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="report/everyday_stats/db" VERSION="20210613" COMMENT="XMLDB file for Moodle report/everyday_stats"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="report_everyday_stats" COMMENT="Таблица ежедневной статистики посещений">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="period" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Период статистики"/>
+        <FIELD NAME="cnt_student" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Количество уникальных студентов за день"/>
+        <FIELD NAME="cnt_teacher" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Количество уникальных преподавателей за день"/>
+        <FIELD NAME="cnt_assistant" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Количество уникальных ассистентов за день"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="u_period_report_everyday_stats" TYPE="unique" FIELDS="period"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
