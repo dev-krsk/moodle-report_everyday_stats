@@ -67,8 +67,8 @@ class lib
             mtrace("[REPORT EVERYDAY STATS] Статистика за прошлый день сохранена в базе.");
         } else {
             $oldStat->cnt_student = $cntStudent;
-            $oldStat->cnt_teacher = $cntStudent;
-            $oldStat->cnt_assistant = $cntStudent;
+            $oldStat->cnt_teacher = $cntTeacher;
+            $oldStat->cnt_assistant = $cntAssistant;
 
             $DB->update_record('report_everyday_stats', $oldStat);
 
