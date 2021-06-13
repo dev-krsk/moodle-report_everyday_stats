@@ -55,7 +55,7 @@ class lib
 
         $oldStat = $DB->get_record('report_everyday_stats', ['period' => $dBeg]);
 
-        if ($oldStat === null) {
+        if (!$oldStat) {
             $stat = new \stdClass();
             $stat->period = $dBeg;
             $stat->cnt_student = $cntStudent;
