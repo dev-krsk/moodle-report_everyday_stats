@@ -45,8 +45,8 @@ class lib
         mtrace(userdate($dEnd));
 
         $cntStudent = sql_query::cnt_logged_in(sql_query::ROLE_STUDENT, $dBeg, $dEnd);
-        $cntTeacher = sql_query::cnt_logged_in(sql_query::ROLE_ASSISTANT, $dBeg, $dEnd);
-        $cntAssistant = sql_query::cnt_logged_in(sql_query::ROLE_TEACHER, $dBeg, $dEnd);
+        $cntTeacher = sql_query::cnt_logged_in(sql_query::ROLE_TEACHER, $dBeg, $dEnd);
+        $cntAssistant = sql_query::cnt_logged_in(sql_query::ROLE_ASSISTANT, $dBeg, $dEnd);
 
         mtrace(sprintf("[REPORT EVERYDAY STATS] Период  с %s по %s", userdate($dBeg), userdate($dEnd)));
         mtrace("[REPORT EVERYDAY STATS] Количество уникаальных входов студентов: $cntStudent");
